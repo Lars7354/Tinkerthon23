@@ -16,7 +16,7 @@ RUN pip3 install --upgrade pip && \
 # Add and download your model weight files 
 # (in this case we have a python script)
 ADD download.py .
-# RUN python3 download.py
+RUN python3 download.py
 
 # Add only the necessary code files
 # Adjust this based on your actual code structure
