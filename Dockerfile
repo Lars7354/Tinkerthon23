@@ -5,7 +5,7 @@ WORKDIR /
 
 # Install git and update package lists
 RUN apt-get update && apt-get install -y git && \
-    apt-get install -y libgl1-mesa-dev
+    apt-get install -y libgl1-mesa-dev libglib2.0-0
 
 # Install additional python packages
 # torch is already installed in this image
@@ -29,3 +29,4 @@ EXPOSE 8000
 
 # Start the app in the container
 CMD python3 -u app.py
+
