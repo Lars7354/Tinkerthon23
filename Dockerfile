@@ -11,6 +11,9 @@ RUN apt-get update && apt-get install -y git
 RUN pip3 install --upgrade pip
 ADD requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
+RUN pip install diffusers --upgrade
+RUN pip install invisible_watermark transformers accelerate safetensors
+
 
 # Add and download your model weight files 
 # (in this case we have a python script)
