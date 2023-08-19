@@ -12,7 +12,7 @@ app = Potassium("my_app")
 def init():
     repo_id="stabilityai/stable-diffusion-xl-base-1.0"
     model = DiffusionPipeline.from_pretrained(
-        stabilityai/stable-diffusion-xl-base-1.0, 
+        "stabilityai/stable-diffusion-xl-base-1.0", 
         use_safetensors=True,
         torch_dtype=torch.float16,
         variant="fp16"
