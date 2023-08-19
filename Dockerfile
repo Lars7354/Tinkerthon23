@@ -5,7 +5,6 @@ WORKDIR /
 
 # Install git and required libraries
 RUN apt-get update && \
-    apt-get install -y git libgl1-mesa-dev libglib2.0-0:i386 && \
     rm -rf /var/lib/apt/lists/*  # Clean up
 
 # Install additional python packages
