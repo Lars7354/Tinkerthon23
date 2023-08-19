@@ -15,7 +15,7 @@ RUN pip install diffusers --upgrade
 RUN pip install invisible_watermark transformers accelerate safetensors
 RUN apt install sudo
 RUN sudo apt-get install -y libgl1-mesa-dev
-RUN sudo apt-get install libglib2.0-0
+RUN sudo apt-get install libglib2.0-0:i386
 
 
 # Add and download your model weight files 
