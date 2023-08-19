@@ -8,7 +8,7 @@ def download_model():
     # do a dry run of loading the huggingface model, which will download weights
     # this should match the model load used in app.py's init function
 
-    repo_id="Meina/MeinaUnreal_V3"
+    repo_id="stabilityai/stable-diffusion-xl-base-1.0"
     ddpm = DDPMScheduler.from_pretrained(repo_id, subfolder="scheduler")
 
     DiffusionPipeline.from_pretrained(
