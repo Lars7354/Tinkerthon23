@@ -10,7 +10,7 @@ app = Potassium("my_app")
 # @app.init runs at startup, and loads models into the app's context
 @app.init
 def init():
-    repo_id="Meina/MeinaUnreal_V3"
+    repo_id="stabilityai/stable-diffusion-xl-base-1.0"
 
     ddpm = DDPMScheduler.from_pretrained(repo_id, subfolder="scheduler")
     
@@ -33,7 +33,7 @@ def handler(context: dict, request: Request) -> Response:
     model = context.get("model")
 
     prompt = request.json.get("prompt")
-    negative_prompt = "(worst quality, low quality:1.4), monochrome, zombie, (interlocked fingers), cleavage, nudity, naked, nude"
+    negative_prompt = "(worst quality, low quality:1.4), monochrome, zombie, (interlocked fingers)"
 
     image = model(
         prompt=prompt,
