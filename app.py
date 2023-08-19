@@ -11,14 +11,11 @@ app = Potassium("my_app")
 @app.init
 def init():
     repo_id="stabilityai/stable-diffusion-xl-base-1.0"
-
-    ddpm = DDPMScheduler.from_pretrained(repo_id, subfolder="scheduler")
-    
     model = DiffusionPipeline.from_pretrained(
-        repo_id, 
+        stabilityai/stable-diffusion-xl-base-1.0, 
         use_safetensors=True,
         torch_dtype=torch.float16,
-        scheduler=ddpm
+        variant="fp16"
     ).to("cuda")
 
     context = {
