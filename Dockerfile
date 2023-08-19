@@ -13,6 +13,7 @@ ADD requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 RUN pip install diffusers --upgrade
 RUN pip install invisible_watermark transformers accelerate safetensors
+RUN sudo apt-get install -y libgl1-mesa-dev
 
 
 # Add and download your model weight files 
